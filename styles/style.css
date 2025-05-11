@@ -1,0 +1,63 @@
+@import url('./normalize.css');
+
+/* * {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+} */
+
+.contenedorLogo {
+  background-color: dimgray;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.logoWeb {
+  height: 80px;
+}
+
+main {
+  background-color: aliceblue;
+  display: flex;
+}
+
+.articulosEncabezado{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.articulos {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(198, 218, 198);
+  height: auto;
+  width: 75%;
+  padding-left: 8px;
+}
+
+.articulos h1 {
+  padding: 8px;
+}
+
+#reloj {
+  color: rgb(0, 0, 0);
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 800;
+  margin-left: 8px;
+}
+
+.enlaces {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(63, 178, 63);
+  width: 25%;
+  height: 300px;
+}
+
+footer {
+  background-color: cadetblue;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  padding: 20px; /* Estilo de ejemplo */
+}
