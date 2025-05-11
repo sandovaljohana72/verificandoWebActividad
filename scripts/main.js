@@ -1,41 +1,51 @@
-// if (window.innerWidth <= 768) {
-//   alert("Estás en modo móvil");
-// } else {
-//   alert("Estás en modo escritorio");
-// }
+// Alert para saber en que tipo de navegador estoy
+if (window.innerWidth <= 768) {
+  alert("Estás en modo móvil");
+} else {
+  alert("Estás en modo escritorio");
+}
 
-
+//Variables para almacenar la hora
 let hora, minutos, segundos;
 
 function obtenerHora() {
-  // Obtengo la hora actual
-  let ahora = new Date();
-  hora = ahora.getHours();
-  minutos = ahora.getMinutes();
-  segundos = ahora.getSeconds();
-
-  // Aseguro que siempre se muestren dos dígitos
-  hora = hora <= 9 ? '0' + hora : hora;
-  minutos = minutos <= 9 ? '0' + minutos : minutos;
-  segundos = segundos <= 9 ? '0' + segundos : segundos;
+  const ahora = new Date();
+  hora = ahora.getHours().toString().padStart(2, '0');
+  minutos = ahora.getMinutes().toString().padStart(2, '0');
+  segundos = ahora.getSeconds().toString().padStart(2, '0');
 }
 
 function mostrarHoraConsola() {
-  obtenerHora(); 
+  obtenerHora();
   console.log(`Hora actual: ${hora}:${minutos}:${segundos}`);
-  
 }
-setInterval(mostrarHoraConsola, 10000);
 
 function actualizarReloj() {
-  obtenerHora(); 
-  let lahora = `${hora}:${minutos}:${segundos}`;
-  let reloj = document.getElementById('reloj');
-  reloj.innerHTML = lahora;
-  setInterval(actualizarReloj, 10000);
+  obtenerHora();
+  const reloj = document.getElementById('reloj');
+  reloj.textContent = `${hora}:${minutos}:${segundos}`;
 }
 
+// Inicialización de mis relojes
+setInterval(actualizarReloj, 10000);
+setInterval(mostrarHoraConsola, 10000);
 actualizarReloj();
 
-
-
+// Carga artículos desde el JSON
+fetch('./src/data/articles.json')
+  .then(res => res.json())
+  .then(articulos => {
+    const contenedor = document.querySelector('.articulos');
+    articulos.forEach(({ titulo, texto }) => {
+      const article = document.createElement('article');
+      article.classList.add('articulos');
+      article.innerHTML = `
+        <h2 class="articulosTitulo">${titulo}</h2>
+        <p class="articulosTexto">${texto}</p>
+      `;
+      contenedor.appendChild(article);
+    });
+  })
+  .catch(error => {
+    console.error('Error al cargar los artículos:', error);
+  });

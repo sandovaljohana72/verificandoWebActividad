@@ -1,0 +1,14 @@
+[
+  {
+    "titulo": "La revolución digital",
+    "texto": "La evolución tecnológica dio un salto exponencial con la llegada de la era digital. Desde finales del siglo XX, la digitalización transformó la forma en que las personas se comunican, trabajan y consumen información. Las computadoras personales, Internet y los teléfonos móviles marcaron el inicio de una nueva era que permitió la conexión global instantánea y el acceso masivo a datos."
+  },
+  {
+    "titulo": "Inteligencia artificial y automatización",
+    "texto": "En las últimas décadas, la inteligencia artificial ha avanzado de forma impresionante. Hoy en día, algoritmos pueden aprender de los datos, tomar decisiones y ejecutar tareas antes impensables para una máquina. Desde asistentes virtuales hasta coches autónomos, la automatización está cambiando industrias enteras, aumentando la productividad y planteando nuevos retos éticos y laborales."
+  },
+  {
+    "titulo": "Tecnologías emergentes y el futuro",
+    "texto": "El futuro de la tecnología está en manos de desarrollos emergentes como la computación cuántica, la biotecnología y el metaverso. Estas innovaciones prometen transformar sectores como la medicina, la educación y el entretenimiento. Sin embargo, su desarrollo también requiere una reflexión profunda sobre la privacidad, el acceso equitativo y la sostenibilidad en un mundo cada vez más interconectado."
+  }
+]

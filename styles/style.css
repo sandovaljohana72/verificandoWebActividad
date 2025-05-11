@@ -1,15 +1,21 @@
 @import url('./normalize.css');
 
-/* * {
-  margin: 0%;
-  padding: 0%;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-} */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
 
 .contenedorLogo {
   background-color: dimgray;
   display: flex;
   justify-content: flex-start;
+  padding: 10px;
 }
 
 .logoWeb {
@@ -17,47 +23,74 @@
 }
 
 main {
-  background-color: aliceblue;
   display: flex;
-}
-
-.articulosEncabezado{
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  background-color: aliceblue;
+  min-height: 100vh;
 }
 
 .articulos {
+  width: 75%;
+  padding: 20px;
+  background-color: rgb(198, 218, 198);
   display: flex;
   flex-direction: column;
-  background-color: rgb(198, 218, 198);
-  height: auto;
-  width: 75%;
-  padding-left: 8px;
 }
 
-.articulos h1 {
-  padding: 8px;
+.articulosEncabezado {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding-left: 16px;
+}
+
+.articulosTitulo {
+  font-size: 1.5rem;
+  color: darkgreen;
+}
+
+.articulosTexto {
+  text-align: justify;
 }
 
 #reloj {
-  color: rgb(0, 0, 0);
+  color: #000;
   font-family: 'Courier New', Courier, monospace;
   font-weight: 800;
-  margin-left: 8px;
+  margin: 0px 16px;
 }
 
 .enlaces {
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(63, 178, 63);
   width: 25%;
-  height: 300px;
+}
+
+.enlaces ul li {
+  color: rgb(0, 0, 0);
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  padding: 10px;
+  list-style: none;
+}
+
+.enlaces ul li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  display: block;
+}
+
+.enlaces ul li a:hover {
+  color: darkgreen;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.enlaces h2 {
+  margin-bottom: 10px;
 }
 
 footer {
-  background-color: cadetblue;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  padding: 20px; /* Estilo de ejemplo */
+  background-color: rgb(122, 170, 140);
+  padding: 10px;
+}
+
+footer img {
+  height: 31px;
+  margin-top: 5px;
 }
